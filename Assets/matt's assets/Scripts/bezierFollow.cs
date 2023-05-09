@@ -10,7 +10,7 @@ public class bezierFollow : MonoBehaviour
 
     private int routeToGo;
 
-    private float tParam;
+    public float tParam;
 
     private Vector3 cubePosition;
 
@@ -53,9 +53,9 @@ public class bezierFollow : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        tParam = 0f;
+/*        tParam = 0f;*/
 
-        routeToGo += 1;
+/*        routeToGo += 1;*/
         
         if (routeToGo >= routes.Length)
         {
