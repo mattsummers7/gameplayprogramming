@@ -157,12 +157,6 @@ public class characterMovement : MonoBehaviour
             
             
         }
-
-        if(!defaultMovement)
-        {
-            rb.velocity = new Vector3(0, playerMovement.y, -playerMovement.z);
-            transform.forward = new Vector3(0, 0, -playerMovement.z);
-        }
         
     }
 
