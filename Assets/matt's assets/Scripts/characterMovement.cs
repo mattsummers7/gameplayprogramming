@@ -59,6 +59,7 @@ public class characterMovement : MonoBehaviour
 
         input.CharacterControls.Movement.performed += ctx =>
         {
+            Debug.Log("Current movement vector " + ctx);
             currentMovement = ctx.ReadValue<Vector2>();
             playerMovement.x = currentMovement.x * speedMultiplier;
             playerMovement.z = currentMovement.y * speedMultiplier;
@@ -68,6 +69,7 @@ public class characterMovement : MonoBehaviour
 
         input.CharacterControls.Movement.canceled += ctx =>
         {
+            Debug.Log("Movement cancelled");
             currentMovement = Vector2.zero;
         };
 
