@@ -11,5 +11,9 @@ public class DamageTaken : MonoBehaviour
         {
             health.NegativeHealth(damageAmount);
         }
+        else if (collision.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
+        {
+            enemyHealth.NegativeHealth(damageAmount);
+        }
     }
 }

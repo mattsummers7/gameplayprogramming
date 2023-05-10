@@ -52,6 +52,8 @@ public class characterMovement : MonoBehaviour
     private Rigidbody rb;
     public ParticleSystem powerUpParticles;
 
+    public GameObject melee;
+
     void Awake()
     {
         input = new PlayerInput();
@@ -332,10 +334,12 @@ public class characterMovement : MonoBehaviour
             if (attackPressed)
             {
                 animator.SetBool(hasAttackedHash, true);
+                melee.SetActive(true);
             }
             if (!attackPressed)
             {
                 animator.SetBool(hasAttackedHash, false);
+                melee.SetActive(false);
             }
         }
         
