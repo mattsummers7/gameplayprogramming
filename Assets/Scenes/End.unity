@@ -2157,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1488470502}
-  velocity: 7.5
+  velocity: 7.9
   stoppingDistance: 6.4
   retreatDistance: 10
 --- !u!114 &1520632938

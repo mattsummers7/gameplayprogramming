@@ -11,7 +11,7 @@ public class EnemyProjectile : MonoBehaviour
 	Transform Point;
 
 	[SerializeField]
-	float turningSpeed = 5;
+	float turningSpeed = 6;
 	
 	Transform target;
 

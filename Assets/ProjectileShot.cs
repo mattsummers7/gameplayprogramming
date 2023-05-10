@@ -18,6 +18,15 @@ public class ProjectileShot : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.tag == ("Player"))
+        {
+            Destroy(gameObject);
+        }
+        
+    }
+
 
 
 }
