@@ -136,7 +136,7 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(defaultMovement)
+        if(!cutsceneActive)
         {
             movement();
             handleMovement();

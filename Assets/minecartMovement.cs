@@ -17,6 +17,10 @@ public class minecartMovement : MonoBehaviour
     public float gravityScale = 5;
     float velocity;
 
+    public GameObject blockade;
+    public GameObject cam1;
+    public GameObject cam2;
+
     PlayerInput input;
 
     void Awake()
@@ -25,6 +29,11 @@ public class minecartMovement : MonoBehaviour
 
         input.CharacterControls.Jump.started += onJump;
 
+    }
+
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -86,8 +95,7 @@ public class minecartMovement : MonoBehaviour
     {
         isMoving = true;
 
-        
-        
+        other.transform.SetParent(transform);
 
     }
 
@@ -96,16 +104,22 @@ public class minecartMovement : MonoBehaviour
         /*this.gameObject.GetComponent<BoxCollider>().enabled = false;*/
         disableMovement.defaultMovement = false;
         isMoving = false;
-        speed = 6;
+        speed = 20;
         canJump = true;
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(15);
 
         Debug.Log(isMoving);
 
         speed = 0;
         canJump = false;
         disableMovement.defaultMovement = true;
+        blockade.SetActive(true);
+
+        cam1.SetActive(true);
+        cam2.SetActive(false);
+
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
 
 
         yield return new WaitForSeconds(1);
