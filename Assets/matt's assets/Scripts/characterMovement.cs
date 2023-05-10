@@ -27,7 +27,7 @@ public class characterMovement : MonoBehaviour
     private Vector3 playerMovement;
     bool movementPressed;
     bool attackPressed;
-    bool jumpPressed = false;
+    public bool jumpPressed = false;
     bool lookPressed;
     bool lockedOn;
     public bool interactActive;
@@ -102,7 +102,6 @@ public class characterMovement : MonoBehaviour
         input.CharacterControls.Look.canceled += ctx =>
         {
             lookMovement = Vector2.zero;
-            Debug.Log(ctx.ReadValue<Vector2>());
         };
 
         input.CharacterControls.LockOn.performed += ctx =>
@@ -137,13 +136,11 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!cutsceneActive)
+        if(defaultMovement)
         {
             movement();
             handleMovement();
             handleAttack();
-            
-            
             handleJump();
         }
         groundCheck();
