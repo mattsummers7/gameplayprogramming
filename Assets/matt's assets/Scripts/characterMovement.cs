@@ -229,7 +229,7 @@ public class characterMovement : MonoBehaviour
 
     void groundCheck()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, .5f, platformLayerMask))
+        if (!Physics.Raycast(transform.position, Vector3.down, .2f, platformLayerMask))
         {
             isGrounded = false;
 
