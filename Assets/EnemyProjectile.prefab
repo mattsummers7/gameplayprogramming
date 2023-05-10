@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 431932954653235494}
   - component: {fileID: 8336986025874693927}
   - component: {fileID: 5852927891082641671}
+  - component: {fileID: 7376798306016561570}
   m_Layer: 0
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedShot: 18000
+--- !u!114 &7376798306016561570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347160935300310581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa133ebfd640d4db79b09dba93c8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 25
